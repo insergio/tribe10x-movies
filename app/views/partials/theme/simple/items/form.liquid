@@ -71,6 +71,34 @@
       {% include 'theme/simple/field_error', errors: object.errors.price %}
     </div>
 
+    <div class="my-3">
+      <label class="block" for="title">Title</label>
+      <input class="w-2/3 form-input" type="text" id="title" name="item[title]" value="{{ item.title }}" autofocus required
+        />
+      {% include 'theme/simple/field_error', errors: object.errors.name %}
+    </div>
+
+    <div class="my-3">
+      <label class="block" for="runtime">Runtime</label>
+      <input class="w-2/3 form-input" type="text" id="runtime" name="item[runtime]" value="{{ item.runtime }}" autofocus required
+        />
+      {% include 'theme/simple/field_error', errors: object.errors.name %}
+    </div>
+
+    <div class="my-3">
+      <label class="block" for="director">Director</label>
+      <input class="w-2/3 form-input" type="text" id="director" name="item[director]" value="{{ item.director }}" autofocus required
+        />
+      {% include 'theme/simple/field_error', errors: object.errors.name %}
+    </div>
+
+    <div class="my-3">
+      <label class="block" for="year">Year</label>
+      <input class="w-2/3 form-input" type="text" id="year" name="item[year]" value="{{ item.year }}" autofocus required
+        />
+      {% include 'theme/simple/field_error', errors: object.errors.name %}
+    </div>
+
     <button class="mt-8 button" value="{{ path }}">Submit</button>
   </form>
 

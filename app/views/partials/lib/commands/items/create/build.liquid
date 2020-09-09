@@ -7,7 +7,13 @@
     "description": {{ object.description | default: "" | json }},
     "category":    {{ object.category | default: "" | json }},
     "price":       {{ object.price | plus: 0 | times: 100 | to_positive_integer: 1 }},
-    "uuid":        {{ object.uuid | json }}
+    "uuid":        {{ object.uuid | json }},
+    "title":        {{ object.title | json }},
+    "runtime":     {{ object.runtime | json }},
+    "director":    {{ object.director | json }},
+    "year":        {{ object.year | json }}
+
+
   }
 {% endparse_json %}
 

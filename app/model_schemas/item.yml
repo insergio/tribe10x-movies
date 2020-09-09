@@ -16,3 +16,11 @@ properties:
     type: string
   - name: cover_photo_url
     type: string
+  - name: runtime
+    type: string
+  - name: title
+    type: string
+  - name: director
+    type: string
+  - name: year
+    type: string

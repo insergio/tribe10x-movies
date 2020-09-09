@@ -15,6 +15,10 @@ query search($id: ID, $limit: Int = 20, $tag: String, $keyword: String, $categor
         { properties: { name: "name", contains: $keyword } }
         { properties: { name: "tags", contains: $keyword } }
         { properties: { name: "category", contains: $keyword } }
+        { properties: { name: "year", contains: $keyword } }
+        { properties: { name: "director", contains: $keyword } }
+
+
       ]
     },
     sort: [$sort])
@@ -31,6 +35,12 @@ query search($id: ID, $limit: Int = 20, $tag: String, $keyword: String, $categor
       price: property_int(name: "price")
       tags: property_array(name: "tags")
       cover_photo_url: property(name: "cover_photo_url")
+      title: property(name: "title")
+      runtime: property(name: "runtime")
+      year: property(name: "year")
+      director: property(name: "director")
+
+
 
       owner: related_user(join_on_property: "owner", foreign_property: "id") {
         id

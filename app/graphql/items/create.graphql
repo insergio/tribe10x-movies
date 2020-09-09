@@ -1,4 +1,4 @@
-mutation create_item($name: String!, $description: String, $tags: [String], $owner: String!, $category: String, $price: Int!, $uuid: String!) {
+mutation create_item($name: String!, $description: String, $tags: [String], $owner: String!, $category: String, $price: Int!, $uuid: String!, $title: String!, $runtime: String!, $director: String!, $year: String!) {
   model_create(
     model: {
       model_schema_name: "item"
@@ -10,6 +10,12 @@ mutation create_item($name: String!, $description: String, $tags: [String], $own
         { name: "owner" value: $owner }
         { name: "category" value: $category }
         { name: "price" value_int: $price }
+        { name: "title" value: $title }
+        { name: "runtime" value: $runtime }
+        { name: "director" value: $director }
+        { name: "year" value: $year }
+
+
       ]
     }
   ){
