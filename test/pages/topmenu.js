@@ -2,7 +2,7 @@ import { Selector } from 'testcafe';
 
 export default class TopMenuBtns {
   constructor() {
-    this.logoBtn = Selector('span').withText('MVP Marketplace')
+    this.logoBtn = Selector('span').withText('Tribe10x-Movies')
     this.listItemBtn = Selector('a').withText('List your item')
     this.dashboardBtn = Selector('a').withText('Dashboard')
     this.logInBtn = Selector('header').find('a').withText('Log in')
